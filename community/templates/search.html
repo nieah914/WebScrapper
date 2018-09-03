@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>search</title>
+    </head>
+<body>
+    <form action="/post_list/" method="POST">
+        {% comment %}
+            {{ form.as_table }}
+            {{ form.as_p }}
+            {{ form.as_ul }}
+        {% endcomment %}
+        
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">search</button>
+    </form>
+</body>
+</html>

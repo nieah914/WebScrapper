@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ postedData }}</title>
+</head>
+<body>
+    <form action="/post_list/" method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">search</button>
+    </form>
+    <form action="/post_list/" method="post">
+        <button type="submit" class="btn btn-primary">다음페이지</button>
+    </form>
+
+
+    <p>Google</p>
+    <ul>
+        {% for post in google_site_lists %}
+        <li>
+            <div class="title"><a href={{ post.link }}>{{ post.title }}</a></div>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <p>Naver</p>
+    <ul>
+        {% for post in naver_site_lists %}
+        <li>
+            <div class="title"><a href={{ post.link }}>{{ post.title }}</a></div>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <p>Daum</p>
+    <ul>
+        {% for post in daum_site_lists %}
+        <li>
+            <div class="title"><a href={{ post.link }}>{{ post.title }}</a></div>
+        </li>
+        {% endfor %}
+    </ul>
+
+
+
+</body>
+</html>

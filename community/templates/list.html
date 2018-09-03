@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>search</title>
+
+    </head>
+<body>
+    <ul>
+        <li>keyword</li>
+    {% for scrapper in scrapperlist %}
+        <li><a href="/view/{{scrapper.id}}">{{ scrapper.keyword}}<a/> | {{ scrapper.keyword}} |{{ scrapper.keyword}}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
